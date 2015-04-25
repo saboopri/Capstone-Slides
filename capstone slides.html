@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>capstone slides</title>
+  <meta name="description" content="">
+  <meta name="author" content="Priyanka">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/night.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/zenburn.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h1>Predict Next Word!</h1>
+  <h3>DATA SCIENCE CAPSTONE</h3>
+
+<h4>JHU - COURSERA</h4>
+
+<p><small> Created by Priyanka Saboo</small></p>
+
+<p><small><small> Slide Template taken from <a href="http://ramnathv.github.io/slidifyExamples/">Slidify Examples</a> </small></small></p>
+
+</section>
+<section class='' data-state='' id='slide-2'>
+  <h2>Why Predict?</h2>
+  <blockquote>
+<p>Isn&#39;t is awesome when someone can read your mind? Okay, maybe we can&#39;t do that right now BUT what we can do is <strong>predict what you will type next...</strong></p>
+</blockquote>
+
+<p class='fragment'>so when you type: <strong>i love...</strong></p>
+
+<p class='fragment'>our first prediction would be <strong>YOU</strong></p>
+
+</section>
+<section class='' data-state='' id='slide-3'>
+  <h2>BUT How Does It Work?</h2>
+  <p><small>...hit next arrow...</small></p>
+
+<p class='fragment'>You enter a word or a phrase</p>
+
+<p class='fragment'>Our application runs the magic algorithm (pre-modeled by huge datasets from news, blogs and twitter taken from <a href="www.corpora.heliohost.org">HC Corpora</a>)</p>
+
+<p class='fragment'>Our application returns up-to five possible predictions</p>
+
+<p class='fragment'>It even lets you select the word and continue searching until your sentence is complete</p>
+
+</section>
+<section class='' data-state='' id='slide-4'>
+  <h2>Algorithm?</h2>
+  <p class='fragment'>The application is pre-modeled and trained by N-grams made from huge datasets</p>
+
+<p class='fragment'>The datasets had to be cleaned before they could be trained</p>
+
+<p class='fragment'>We then built a function <strong>search</strong>, for prediction, using Basic NLP and utilizing N-grams in Markov Model and Back-off Model</p>
+
+<blockquote>
+<p>The <strong>TM Package</strong> was used extensively in creating the Application</p>
+</blockquote>
+
+</section>
+<section class='' data-state='' id='slide-5'>
+  <h2>Why Dont You Try It Yourself?</h2>
+  <blockquote>
+<p>The application is deployed at <a href="https://saboopri.shinyapps.io/predictword-capstone/">ShinyApps.io</a>*</p>
+</blockquote>
+
+<p class='fragment'>Wait for the application to load</p>
+
+<p class='fragment'>Begin typing word(s) in the provided text box</p>
+
+<p class='fragment'>The word(s) will be searched for the next best prediction</p>
+
+<p class='fragment'>The predictions will be shown with your typed phrase. You can select one of the predictions to copy it in the text field and the next prediction will be automaticaly searched</p>
+
+<p class='fragment'>Check out the cool <strong>WordCloud</strong>, the <strong>Probability Graph</strong>, and <strong>About</strong> for more details</p>
+
+<blockquote>
+<p>THANK YOU</p>
+</blockquote>
+
+<p><small>* Click on the link to access the app</small></p>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'night', 
+    transition: Reveal.getQueryHash().transition || 'none', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
